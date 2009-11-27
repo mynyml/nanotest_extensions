@@ -1,13 +1,10 @@
 === Summary
 
 Provides a few nano extensions to use with nanotest[http://github.com/mynyml/nanotest].
+See each extension's README for details and examples:
 
-=== Examples
-
-See each extension's README for examples:
-
-* nanotest/spec[link://README_SPEC.rdoc]
-* nanotest/contexts[link://README_CONTEXTS.rdoc]
+* nanotest/spec     #=> README_SPEC.rdoc
+* nanotest/contexts #=> README_CONTEXTS.rdoc
 
 === Install
 
