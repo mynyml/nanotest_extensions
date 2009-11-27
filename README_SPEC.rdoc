@@ -1,0 +1,38 @@
+=== Summary
+
+Allows assertions with .must and .wont
+
+=== Examples
+
+  require 'nanotest'
+  require 'nanotest/spec'
+  include  Nanotest
+
+  'foo'.size.must == 3
+  'bar'.size.wont <= 1
+
+  [1,2,3].must.include?(1)
+  [1,2,3].wont.include?(4)
+
+  # assertions can also be chained
+  [1,2,3].must.include?(1).
+          must.include?(2).
+          must.include?(3).
+          wont.include?(4)
+
+  # must/wont are full assertion proxies, so methods sent to it work as
+  # expected (i.e. they accept args and blocks)
+  [1,2,3].must.detect {|i| i == 2 }
+
+=== API
+
+Provides two methods, Object#must and Object#wont.
+The words "must" and "wont" for assertions follow minitest/spec's convention.
+
+If you prefer other words, simply alias must/wont
+
+  class Object
+    alias :should :must
+    alias :should_not :wont
+  end
+

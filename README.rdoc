@@ -1,0 +1,19 @@
+=== Summary
+
+Provides a few nano extensions to use with nanotest[http://github.com/mynyml/nanotest].
+See each extension's README for examples:
+
+nanotest/spec[README_SPEC.rdoc]
+nanotest/context[README_CONTEXTS.rdoc]
+
+=== Install
+
+  gem install nanotest_extensions --source http://gemcutter.org
+
+=== Links
+
+source:: http://github.com/mynyml/nanotest_extensions
+docs::   http://rdoc.info/projects/mynyml/nanotest_extensions
+wiki::   http://wiki.github.com/mynyml/nanotest_extensions
+bugs::   http://github.com/mynyml/nanotest_extensions/issues
+

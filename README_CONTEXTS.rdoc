@@ -1,0 +1,47 @@
+=== Summary
+
+Provides embeddable contexts with setups and teardowns
+
+=== Examples
+
+  require 'nanotest'
+  require 'nanotest/contexts'
+  include  Nanotest::Contexts
+
+  context do
+    setup { @foo = 'foo' }
+    teardown { @foo = nil }
+
+    # test description
+    test do
+      @foo #=> 'foo'
+    end
+
+    context do
+      setup { @bar = 'bar' }
+
+      test do
+        @foo #=> 'foo'
+        @bar #=> 'bar'
+      end
+    end
+  end
+
+=== API
+
+Contexts provides 4 methods: #context, #setup, #teardown, #test. You can
+either include Contexts as above, or use its methods directly:
+
+  Nanotest::Contexts.context {}
+  Nanotest::Contexts.setup {}
+  Nanotest::Contexts.teardown {}
+  Nanotest::Contexts.test {}
+
+If you prefer other method names, simply alias them
+
+  module Nanotest::Contexts 
+    alias :describe :context
+    alias :before :setup
+    alias :after :teardown
+  end
+
