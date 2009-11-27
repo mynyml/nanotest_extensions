@@ -31,7 +31,13 @@ Provides embeddable contexts with setups and teardowns
 === API
 
 Contexts provides 4 methods: #context, #setup, #teardown, #test. You can
-either mix it in as above, or keep it namespaced (Nanotest::Contexts.context {}).
+either mix it in as above, or keep it namespaced
+
+  Nanotest::Contexts.context do
+    setup {}
+    # ...
+  end
+
 If you prefer other method names, simply alias them:
 
   module Nanotest::Contexts 
