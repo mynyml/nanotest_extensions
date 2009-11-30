@@ -1,7 +1,6 @@
 require 'test/test_helper'
 require 'nanotest/contexts'
-
-include Nanotest
+include  Nanotest
 
 # test: API
 assert { Contexts.respond_to?(:context) }

@@ -8,9 +8,11 @@ Rakefile
 lib/nanotest/contexts.rb
 lib/nanotest/focus.rb
 lib/nanotest/spec.rb
+lib/nanotest/stats.rb
 nanotest_extensions.gemspec
 specs.watchr
 test/test_contexts.rb
 test/test_focus.rb
 test/test_helper.rb
 test/test_spec.rb
+test/test_stats.rb

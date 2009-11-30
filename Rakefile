@@ -5,19 +5,20 @@ task(:default => "test:all")
 
 namespace(:test) do
 
+  def run(cmd)
+    puts(cmd) if ENV['VERBOSE']
+    system(cmd)
+  end
+
   desc "Run all tests"
   task(:all) do
-    # test files must be run separately, or else focus kicks in
+    # test files must be run separately, or else focus kicks in and stats resets nanotest
     %w(
       test/test_contexts.rb
       test/test_focus.rb
       test/test_spec.rb
-
-    ).each do |test|
-      cmd = "ruby -rubygems -I.:lib #{test}"
-      puts(cmd) if ENV['VERBOSE']
-      system(cmd)
-    end
+      test/test_stats.rb
+    ).each {|test| run("ruby -rubygems -I.:lib #{test}") }
   end
 
   desc "Run all tests on multiple ruby versions (requires rvm)"
