@@ -1,3 +1,5 @@
+# "Simplicity is the ultimate sophistication" --Leonardo Da Vinci
+
 module Nanotest
   class << self
     alias :stats__orig_results :results

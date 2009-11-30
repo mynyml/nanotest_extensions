@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.homepage            = "http://github.com/mynyml/nanotest_extensions"
   s.rubyforge_project   = "nanotest_extensions"
   s.require_path        = "lib"
-  s.version             = "0.5"
+  s.version             = "0.6"
   s.files               =  File.read("Manifest").strip.split("\n")
 
   s.add_development_dependency 'nanotest'

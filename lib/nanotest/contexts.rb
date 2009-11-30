@@ -1,3 +1,6 @@
+# "Simplicity means the achievement of maximum effect with minimum means."
+# --Koichi Kawana
+
 module Nanotest::Contexts
   extend self
 

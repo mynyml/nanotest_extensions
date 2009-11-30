@@ -1,3 +1,6 @@
+# "Things should be made as simple as possible, but no simpler."
+# --Albert Einstein
+
 module Nanotest
 
   @@focused = false

@@ -1,3 +1,6 @@
+# "Perfection is achieved, not when there is nothing more to add, but when
+# there is nothing left to take away." --Antoine de Saint Exupéry
+
 class Nanotest::Spec
   instance_methods.each {|m| undef_method(m) unless m.match(/^__|object_id/) }
 
