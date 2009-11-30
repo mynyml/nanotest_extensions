@@ -13,7 +13,7 @@ Appends total test time, number of assertions and number of failures.
   assert { false }
   assert { false }
 
-outputs:
+  outputs:
   
   ..FF
   (stats_example.rb:007) assertion failed

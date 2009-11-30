@@ -1,11 +1,6 @@
 === Summary
 
-Easily focus assertions.
-
-Simply call #focus, and the subsequent assertion will be run. Can be called
-multiple times. Any assertion that is not focused will never run (unless focus
-is never called, in which case nanotest will run normally). Will also work
-across all test files.
+Easily focus assertions
 
 === Examples
 
@@ -23,4 +18,4 @@ across all test files.
   assert { true }
 
 This will only run the two tests following the #focus calls, and the "suite"
-will pass.
+will pass. Will also work across test files.
