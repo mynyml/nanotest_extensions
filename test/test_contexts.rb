@@ -1,4 +1,4 @@
-require 'nanotest'
+require 'test/test_helper'
 require 'nanotest/contexts'
 
 include Nanotest

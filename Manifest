@@ -6,8 +6,11 @@ README_CONTEXTS.rdoc
 README_SPEC.rdoc
 Rakefile
 lib/nanotest/contexts.rb
+lib/nanotest/focus.rb
 lib/nanotest/spec.rb
 nanotest_extensions.gemspec
 specs.watchr
 test/test_contexts.rb
+test/test_focus.rb
+test/test_helper.rb
 test/test_spec.rb
