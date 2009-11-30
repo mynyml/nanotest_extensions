@@ -1,0 +1,22 @@
+=== Summary
+
+Appends total test time, number of assertions and number of failures.
+
+=== Examples
+
+  require 'nanotest'
+  require 'nanotest/stats'
+  include  Nanotest
+
+  assert { true  }
+  assert { true  }
+  assert { false }
+  assert { false }
+
+outputs:
+  
+  ..FF
+  (stats_example.rb:007) assertion failed
+  (stats_example.rb:008) assertion failed
+
+  (0.000191 seconds) 4 assertions, 2 failures

@@ -5,6 +5,8 @@ See each extension's README for details and examples:
 
 * nanotest/spec[http://github.com/mynyml/nanotest_extensions/blob/master/README_SPEC.rdoc]
 * nanotest/contexts[http://github.com/mynyml/nanotest_extensions/blob/master/README_CONTEXTS.rdoc]
+* nanotest/focus[http://github.com/mynyml/nanotest_extensions/blob/master/README_FOCUS.rdoc]
+* nanotest/stats[http://github.com/mynyml/nanotest_extensions/blob/master/README_STATS.rdoc]
 
 === Install
 

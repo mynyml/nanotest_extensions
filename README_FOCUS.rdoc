@@ -1,0 +1,26 @@
+=== Summary
+
+Easily focus assertions.
+
+Simply call #focus, and the subsequent assertion will be run. Can be called
+multiple times. Any assertion that is not focused will never run (unless focus
+is never called, in which case nanotest will run normally). Will also work
+across all test files.
+
+=== Examples
+
+  require 'nanotest'
+  require 'nanotest/focus'
+  include  Nanotest
+
+  assert("this test won't run") { false }
+
+  focus
+  assert { true }
+  assert("this test won't run") { false }
+
+  focus
+  assert { true }
+
+This will only run the two tests following the #focus calls, and the "suite"
+will pass.
