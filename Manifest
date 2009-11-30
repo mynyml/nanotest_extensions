@@ -3,7 +3,9 @@ LICENSE
 Manifest
 README.rdoc
 README_CONTEXTS.rdoc
+README_FOCUS.rdoc
 README_SPEC.rdoc
+README_STATS.rdoc
 Rakefile
 lib/nanotest/contexts.rb
 lib/nanotest/focus.rb
