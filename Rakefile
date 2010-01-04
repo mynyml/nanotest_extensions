@@ -12,13 +12,15 @@ namespace(:test) do
 
   desc "Run all tests"
   task(:all) do
-    # test files must be run separately, or else focus kicks in and stats resets nanotest
-    %w(
+    # test files must be run separately, or else focus kicks in, and stats resets nanotest
+    paths = %w(
       test/test_contexts.rb
       test/test_focus.rb
       test/test_spec.rb
       test/test_stats.rb
-    ).each {|test| run("ruby -rubygems -I.:lib #{test}") }
+    )
+    statuses = paths.map {|test| run("ruby -rubygems -I.:lib #{test}") }
+    exit statuses.all?
   end
 
   desc "Run all tests on multiple ruby versions (requires rvm)"
