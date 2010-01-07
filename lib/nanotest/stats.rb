@@ -8,7 +8,7 @@ module Nanotest
       stats = "\n(%f seconds) %d assertions, %d failures" % [Time.now-$nanotest_time, @@dots.size, @@failures.size]
 
       # insert stats after failure message if any, or dots otherwise
-      lines, pos = stats__orig_results.split(/\n/), nil
+      lines, pos = stats__orig_results.split(/\n/), 0
       lines.each_with_index {|line, i| pos = i if line =~ /\((.*):\d+\).*$/ || line =~ /(\.|F)+/ }
       lines.insert(pos + 1, stats).join("\n")
     end
