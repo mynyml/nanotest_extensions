@@ -1,5 +1,6 @@
 Gem::Specification.new do |s|
   s.name                = "nanotest_extensions"
+  s.version             = "0.6.3"
   s.summary             = "Nano extensions for nanotest"
   s.description         = "Nano extensions for nanotest."
   s.author              = "Martin Aumont"
@@ -7,7 +8,6 @@ Gem::Specification.new do |s|
   s.homepage            = "http://github.com/mynyml/nanotest_extensions"
   s.rubyforge_project   = "nanotest_extensions"
   s.require_path        = "lib"
-  s.version             = "0.6.1"
   s.files               =  File.read("Manifest").strip.split("\n")
 
   s.add_development_dependency 'nanotest'
