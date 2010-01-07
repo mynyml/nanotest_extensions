@@ -17,4 +17,13 @@ assert("should not be run") { false }
 
 # ensure focused assertions were run
 focus
-assert { Nanotest.send(:class_variable_get, :@@dots).size == 2 }
+assert { Nanotest.dots.size == 2 }
+
+# test: correctly references origin of assertion
+focus; assert('') { false }; line = __LINE__
+
+actual, expected = Nanotest.failures.last, "(%s:%0.3d) " % [__FILE__,line]
+Nanotest.pop
+focus
+assert("expected: #{expected.inspect}, got: #{actual.inspect}") { actual == expected }
+

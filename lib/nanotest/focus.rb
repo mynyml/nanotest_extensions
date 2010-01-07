@@ -16,14 +16,14 @@ module Nanotest
 
   alias :focus__orig_assert :assert
 
-  def assert(*args, &block)
+  def assert(msg=nil,file=nil,line=nil,stack=caller,&block)
     if @@focused
       if @@focus_next
         @@focus_next = false
-        focus__orig_assert(*args, &block)
+        focus__orig_assert(msg,file,line,stack,&block)
       end
     else
-      focus__orig_assert(*args, &block)
+      focus__orig_assert(msg,file,line,stack,&block)
     end
   end
 end
